@@ -4,7 +4,11 @@
     <title>MAVITO</title>
 </head>
 <body>
-<H1>MAVITO</H1><hr>
+<H1>MAVITO | <a href="/login">Войти</a> </H1><hr>
+<form action="/logout" method="post">
+    <input type="hidden" name="_csrf" value="${_csrf.token}">
+    <input type="submit" value="Выйти"/>
+</form>
 <h4>Товары со всей России</h4>
 <form action="/" method="get">
     Поиск по названию объявления: <input type="text" name="title"><br>
